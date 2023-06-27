@@ -16,7 +16,7 @@ proxy:
     groups: mathematicians
   specs:
   - id: pyshiny-demo
-    container-image: localhost:5001/test:1.0
+    container-image: openanalytics/shinyproxy-shiny-for-python-demo
     port: 8080
 logging:
   file:
