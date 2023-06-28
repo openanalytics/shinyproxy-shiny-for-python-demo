@@ -1,21 +1,21 @@
 # Running Shiny for Python apps in ShinyProxy
 
-This repository describes how to add a Shiny for Python app instide ShinyProxy
+This repository describes how to add a Shiny for Python app inside ShinyProxy.
 
 # Build the Docker image
 
 To pull the image made in this repository from Docker Hub, use
 
 ```bash
-sudo docker pull openanalytics/shinyproxy-shinypy-demo
+sudo docker pull openanalytics/shinyproxy-shiny-for-python-demo
 ```
 
-the relevant Docker Hub repository can be found at https://hub.docker.com/r/openanalytics/shinyproxy-shinypy-demo
+the relevant Docker Hub repository can be found at https://hub.docker.com/r/openanalytics/shinyproxy-shiny-for-python-demo
 
 To build the image from the Dockerfile, clone this repository, then navigate to its root directory and run
 
 ```bash
-sudo docker build -t openanalytics/shinyproxy-shiny-demo .
+sudo docker build -t openanalytics/shinyproxy-shiny-for-python-demo .
 ```
 
 # ShinyProxy Configuration
@@ -23,9 +23,9 @@ sudo docker build -t openanalytics/shinyproxy-shiny-demo .
 To add the Shiny For Python application to ShinyProxy add the following lines to its configuration file (see [application.yml](./application.yml) for a complete file):
 ```
 specs:
-  - id: pyshiny-demo
+  - id: shiny-for-python-demo
     display-name: Shiny For Python Demo Application
-    container-image: openanalytics/shinyproxy-shinypy-demo
+    container-image: openanalytics/shinyproxy-shiny-for-python-demo
     port: 8080
 ```
 
