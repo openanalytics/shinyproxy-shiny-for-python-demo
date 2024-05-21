@@ -22,14 +22,15 @@ sudo docker build -t openanalytics/shinyproxy-shiny-for-python-demo .
 
 To add the Shiny For Python application to ShinyProxy add the following lines to its configuration file (see [application.yml](./application.yml) for a complete file):
 ```
-specs:
-  - id: shiny-for-python-demo
-    display-name: Shiny For Python Demo Application
-    container-image: openanalytics/shinyproxy-shiny-for-python-demo
-    port: 8080
+proxy:
+  specs:
+    - id: shiny-for-python-demo
+      display-name: Shiny For Python Demo Application
+      container-image: openanalytics/shinyproxy-shiny-for-python-demo
+      port: 8080
 ```
 
-# References
+## References
 * https://shiny.posit.co/py/docs/overview.html
 * https://matplotlib.org/3.5.3/gallery/userdemo/colormap_interactive_adjustment.html
 
