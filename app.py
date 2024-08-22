@@ -17,15 +17,13 @@ app_ui = ui.page_fixed(
         [0]: https://matplotlib.org/3.5.3/gallery/userdemo/colormap_interactive_adjustment.html
     """),
     ui.layout_sidebar(
-        ui.panel_sidebar(
+        ui.sidebar(
             ui.input_radio_buttons("cmap", "Colormap type",
                 dict(viridis="Perceptual", gist_heat="Sequential", RdYlBu="Diverging")
             ),
             ui.input_slider("range", "Color range", -1, 1, value=(-1, 1), step=0.05),
         ),
-        ui.panel_main(
-            ui.output_plot("plot")
-        )
+        ui.output_plot("plot")
     )
 )
 
